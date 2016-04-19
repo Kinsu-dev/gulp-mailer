@@ -1,0 +1,46 @@
+
+/* -------------------------------------
+		Typography
+------------------------------------- */
+
+$font: 'Open Sans', Arial, Helvetica, sans-serif;
+$arial: Arial, Helvetica, sans-serif;
+$georgia: Georgia, Helvetica, sans-serif;
+
+h1, h2, h3 {
+
+	font-family: $font;
+	color: $primary-color-text;
+	margin-bottom: 1.35em;
+	line-height: 120%;
+	font-weight: 400;
+}
+
+h1 {
+
+	font-size: 32px;
+	font-weight: 500;
+}
+
+h2 {
+
+	font-size: 24px;
+}
+h3 {
+
+	font-size: 18px;
+}
+
+h4 {
+
+	font-size: 14px;
+}
+
+p {
+	
+	font-family: $font;
+	color: $primary-color-text;
+	font-weight: normal;
+	line-height: 120%;
+	margin-bottom: 1.35em;
+}

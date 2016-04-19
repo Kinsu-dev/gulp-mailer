@@ -1,0 +1,179 @@
+.article {
+
+	max-width: $main-width;
+	background-color: $secondary-base;
+
+	/* Add class to article, so you get full gray background */
+	&.gray {
+		background-color: $theme-base;
+	}
+
+	.main-wrap {
+		
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: $main-max-width - 0;
+		background-color: $secondary-base;
+
+		/* Add class to article, so you get full gray background */
+		&.gray {
+			background-color: $theme-base;
+		
+			a, p, strong {
+				font-size: 16px;
+				font-family: $font;
+				font-weight: normal;
+				color: $primary-color-text;
+				line-height: 150%;
+
+				span {
+					color: $theme-color-text;
+					font-size: 16px;
+				}
+
+				&.blue-theme__color {
+					font-size: 20px;
+					color: $theme-2nd-color-text;
+				}
+
+				/* U tag, is for mark to be recognize by Gmail */
+				mark, u {
+					font: inherit;
+					color: inherit;
+					background-color: $theme-color-text;
+					text-decoration: none;
+				}
+			}
+
+			a {
+				color: $theme-2nd-color-text;
+				text-decoration: none;
+				border-bottom: 1px solid;
+			}
+		}
+
+		/* Add class to article, so you get a centered button */
+		&.description {
+			a, p, strong {
+
+				font-family: $arial;
+				font-weight: normal;
+				font-size: 16px;
+				color: $primary-color-text;
+				line-height: 150%;
+
+				span {
+					color: $theme-color-text;
+					font-size: 20px;
+				}
+
+				/* U tag, is for mark to be recognize by Gmail */
+				mark, u {
+					font: inherit;
+					color: inherit;
+					background-color: $theme-color-text;
+					text-decoration: none;
+				}
+			}
+
+			h3 {
+				font-size: 22px;
+				font-style: italic;
+			}
+
+			a {
+			 
+				color: $theme-color-text;
+				text-decoration: none;
+				border-bottom: 1px solid;
+
+				&[href^="tel:"] {
+					color: $primary-color-text;
+					text-decoration: none;
+					border-bottom: 0;
+				}
+
+				&[title^="clique aqui"] {
+					white-space: nowrap;
+				}
+			}
+		}
+		
+		/* Normal text costomization */
+		a, p, strong {
+
+			font-family: $font;
+			font-size: 16px;
+			color: $primary-color-text;
+			line-height: 150%;
+
+			span {
+				color: $theme-color-text;
+				font-size: 16px;
+				font-family: $font;
+				font-weight: normal;
+				line-height: 200%;
+			}
+
+			&.blue-theme__color {
+				font-size: 20px;
+				color: $theme-2nd-color-text;
+			}
+
+			&[title^="clique aqui"] {
+				white-space: nowrap;
+			}
+
+			/* U tag, is for mark to be recognize by Gmail */
+			mark, u {
+				font: inherit;
+				color: inherit;
+				background-color: $theme-color-text;
+				text-decoration: none;
+			}
+		}
+		
+        span {      
+			font-family: $font;
+			font-size: 12px;
+			color: $primary-color-text;
+			line-height: 140%;
+		}
+		
+		/* WyTalks */
+		.heading {
+			font-size: 110px;
+			font-family: $georgia;
+			font-style: italic;
+			font-weight: normal;
+			line-height: 1em;
+
+			word-break: break-word; // mails without media queries.
+		}
+		.data {
+			color: #000;
+			font-size: 48px;
+			font-family: $georgia;
+			font-weight: normal;
+			line-height: 1em;
+
+		}
+
+		a {
+		 
+			color: $theme-color-text;
+			text-decoration: none;
+			border-bottom: 1px solid;
+
+			&[href^="tel:"] {
+				color: $primary-color-text;
+				text-decoration: none;
+				border-bottom: 0;
+			}
+
+			&[title^="clique aqui"] {
+				white-space: nowrap;
+			}
+		}
+	}
+}

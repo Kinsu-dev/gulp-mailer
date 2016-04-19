@@ -1,0 +1,57 @@
+/* Comment and uncomment,
+the Less files that you need for your css
+default styles used on your Modules */
+
+// @import 'commun/config';
+
+/* Styles used on your Modules
+costum styles used on wytalks themes */
+
+// @import 'wytalks/_wytalks--green';
+// @import 'wytalks/_wytalks--blue';
+// @import 'wytalks/_wytalks--purple';
+// @import 'wytalks/_wytalks--marine-blue';
+// @import 'wytalks/_wytalks--pink';
+// @import 'wytalks/_wytalks--orange';
+
+/* Styles used on you Modules
+costum styles used on Honda themes */
+
+@import 'honda/variable';
+
+/* Styles used on your Modules
+costum styles used on NovoBanco themes */
+
+// @import 'novobanco/_theme-green-nb'; 
+// @import 'novobanco/_theme-NB_360-golden';
+// @import 'novobanco/_theme-NB_Private-gray';
+// @import 'novobanco/_theme-NB_Empresas-blue';
+// @import 'novobanco/_theme-NB_Produto-purple';
+
+
+// Main scss styles
+@import 'commun/type';
+@import 'commun/responsive';
+@import 'commun/normalizer';
+@import 'commun/layout';
+@import 'commun/other';
+
+
+// Partials templating
+@import 'partials/_article';
+@import 'partials/_disclaimer';
+@import 'partials/_quotes';
+@import 'partials/_author';
+@import 'partials/_bullet-text';
+@import 'partials/_double-column';
+@import 'partials/_triple-column';
+@import 'partials/_double_col-3_rows';
+@import 'partials/_four-col_devided';
+@import 'partials/_footers';
+@import 'partials/_image--hero';
+@import 'partials/_product-list';
+@import 'partials/_program-list';
+@import 'partials/_schedual';
+@import 'partials/_signature';
+@import 'partials/_three-column';
+@import 'partials/_webview';

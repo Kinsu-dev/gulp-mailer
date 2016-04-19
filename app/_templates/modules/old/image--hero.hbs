@@ -1,0 +1,18 @@
+<table class="full-width-img" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+	<tr>
+		<td>
+			{{!-- Add max-height class on main-wrap, check or create new class on full-width-img.less file; 
+			e.g.: .header = 480px / 
+			Call image partial e.g.: {{> image-medium class="center" }}
+			Change the width percentage on table 90% = 540px  --  95% = 540px + 30px  --}}
+			<table class="main-wrap {{class}}" width="100%" valign="middle" cellpadding="0" cellspacing="0" border="0"
+			       align="center">
+				<tr>
+					<td>
+						<img src="{{src}}" alt="{{title}}" border="0">
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

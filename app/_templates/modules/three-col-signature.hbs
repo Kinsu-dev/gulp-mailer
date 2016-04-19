@@ -1,0 +1,127 @@
+{{!--  NOTE --
+Wrap the whole table in some conditional code to appease Outlook, Lotus Notes and clients that render with IE
+campaignmonitor : https://www.campaignmonitor.com/blog/post/4240/creating-a-centred-responsive-design-without-media-queries
+JSFiddle : http://jsfiddle.net/YJt3r/
+================================--}}
+<table class="three-col__contatent" width="100%" border="0" cellpadding="0" cellspacing="0" align="center">
+	<tr>
+		<td>
+			{{!-- change the width percentage on table
+			90% = 540px  --  95% = 540px + 30px  --}}
+			<table class="main-wrap" width="95%" cellspacing="0" cellpadding="0" border="0" align="center">
+				<tr>
+					<td>
+						<img src="/images/spacer.gif">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>
+							Esta mensagem foi enviada automaticamente pelo que as mensagens enviadas para este endereço
+							de e-mail não serão respondidas.
+						</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/images/spacer.gif">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="{{src}} alt="{{title}}">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/images/spacer.gif">
+					</td>
+				</tr>
+			</table>
+			{{!-- change the width percentage on table
+			90% = 540px  --  95% = 540px + 30px  --}}
+			<table class="three-col__container" width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
+				<tr>
+					<td style="text-align: left; vertical-align: top; font-size: 0;">
+						<!--[if (gte mso 9)|(IE)]>
+						<table width="600" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2f2f2"
+						       style="background-color: #f2f2f2;">
+							<tr>
+								<td>
+						<![endif]-->
+						<div>
+							<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+								{{!-- text --}}
+								<tr>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+									<td class="valignmid alignleft">
+										<p>
+											Site NB <br/>
+											<a href="#">www.novobanco.pt</a>
+										</p>
+									</td>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						<td>
+						<![endif]-->
+						<div>
+							<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+								{{!-- text --}}
+								<tr>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+									<td class="valignmid alignleft">
+										<p>
+											NBdireto <a href="tel:707247365">707 24 7 365</a><br/>
+											Atendimento personalizado das 8h às 24
+										</p>
+									</td>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						<td>
+						<![endif]-->
+						<div>
+							<table class="three-col__div" border="0" cellpadding="0" cellspacing="0" align="center">
+								{{!-- text --}}
+								<tr>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+									<td class="valignmid alignleft">
+										<p>
+											E-mail <br/>
+											<a href="mailto:#">info@novobanco.pt</a>
+										</p>
+									</td>
+									<td style="width: 10px;">
+										<img src="/images/spacer.gif" width="1" alt="spacer gif"/>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<!--[if (gte mso 9)|(IE)]>
+						</td>
+						</tr>
+						</table>
+						<![endif]-->
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>

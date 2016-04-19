@@ -1,0 +1,19 @@
+/* -------------------------------------
+		BG Color
+------------------------------------- */
+
+$primary-base: 					#eee;
+$secondary-base: 				#fff;
+$theme-base:					#E6E7E7;
+$lighten-theme-base:			lighten($theme-base, 23%);
+$darken-theme-base:				darken($theme-base, 7%);
+
+
+/* -------------------------------------
+		Color
+------------------------------------- */
+
+$primary-color-text: 			#000;
+$theme-color-text: 				rgb(216, 133, 133);
+$theme-2nd-color-text:			$theme-color-text;
+$third-color-text: 				#fff;

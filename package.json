@@ -1,0 +1,48 @@
+{
+  "name": "gulpmailer",
+  "version": "1.0.0",
+  "description": "Email builder",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exist 1"
+  },
+  "keywords": [
+    "gulp",
+    "email",
+    "builder"
+  ],
+  "author": "BYcom",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "css-mqpacker": "^4.0.0",
+    "csswring": "^4.2.1",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.2",
+    "gulp-cdnizer": "^1.1.6",
+    "gulp-clean": "^0.3.2",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-debug": "^2.1.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-litmus": "0.0.7",
+    "gulp-mailgun": "0.0.7",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-premailer": "^0.4.0",
+    "gulp-prettify": "^0.4.0",
+    "gulp-print": "^2.0.1",
+    "gulp-regex-replace": "^0.2.3",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "imagemin-jpeg-recompress": "^4.3.0",
+    "imagemin-pngquant": "^4.2.2",
+    "install": "^0.5.6",
+    "npm": "^3.8.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.5",
+    "vinyl-ftp": "^0.4.5"
+  }
+}

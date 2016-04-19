@@ -1,0 +1,33 @@
+.signature  {
+
+	max-width: $main-width;
+	background-color: $secondary-base;
+
+	.main-wrap {
+		
+		/* change the width percentage on table */
+		/* 90% = 540px  --  95% = 570px + 30px */
+		max-width: $main-max-width + 0;
+		background-color: $secondary-base;
+
+		img[src="/images/nb_ass.png"] {
+			width: 163px;
+			max-width: 163px;
+			height: 23px;
+			max-height: 23px;
+		}
+
+		a, p , span {      
+			font-family: $font;
+			font-size: 16px;
+			color: $primary-color-text;
+			line-height: 140%;
+		}
+
+		a {
+			color: $theme-color-text;
+			text-decoration: underline;
+			// border-bottom: 1px solid $theme-color-text;
+		}
+	}
+}
