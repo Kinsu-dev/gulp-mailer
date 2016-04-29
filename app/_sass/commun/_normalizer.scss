@@ -3,60 +3,50 @@
 ------------------------------------- */
 /* OBLIGATORY EMAIL STYLES SO I DON'T GO CRAZY */
 
-* {
-	
-}
-
 p {
-
 	padding: 0;
 	margin-top: 0;
-	margin-bottom:1.35em; 
-	vertical-align: middle; 
-	line-height: 120%; 
+	margin-bottom:1.35em;
+	vertical-align: middle;
+	line-height: 1.35em;
 }
 
 img {
     font-size: 20px;
 	font-family: $font;
-	display: block; 
-	-ms-interpolation-mode:bicubic; 
-	border:0; 
-	height:auto; 
-	line-height:100%; 
+	display: block;
+	-ms-interpolation-mode:bicubic;
+	border:0;
+	line-height:100%;
 	outline:none;
 	text-decoration:none;
 	mso-line-height-rule:exactly;
 }
 
 body, table, td, a {
-
-	-webkit-text-size-adjust:100%; 
+	-webkit-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
 }
 
 body {
-
-	height:100%!important; 
-	width:100% !important; 
-	margin:0; 
+	height:100%!important;
+	width:100% !important;
+	margin:0;
 	padding:0;
 }
 
 /* Let's make sure all tables have defaults */
 table {
-
 	line-height:100%;
-	mso-table-lspace:0pt; 
+	mso-table-lspace:0pt;
 	mso-table-rspace:0pt;
 	border-collapse:collapse !important;
 
 	td {
-
 		padding: 0;
 		vertical-align: middle;
 		border-collapse: collapse;
-		mso-table-lspace:0pt; 
+		mso-table-lspace:0pt;
 		mso-table-rspace:0pt;
 	}
 }
@@ -68,11 +58,11 @@ td, a, span {
 .MsoNormal p {padding: 0 !important; margin: 0; display: none;}
 #outlook a{padding:0;}
 .ReadMsgBody, .ExternalClass {width:100%;}
-.ExternalClass, .ExternalClass p, 
-.ExternalClass span, .ExternalClass font, 
+.ExternalClass, .ExternalClass p,
+.ExternalClass span, .ExternalClass font,
 .ExternalClass td, .ExternalClass div {
-	line-height: 100%; 
-	margin-bottom: 0; 
+	line-height: 100%;
+	margin-bottom: 0;
 	margin: 0;
 }
 

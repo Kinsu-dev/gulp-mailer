@@ -36,8 +36,10 @@ gulp.task('serve', function(cb) {
 	var fs 	 = require('fs'),
 		dist = 'dist';
 	if( fs.existsSync( dist ) ) {
+		gutil.log('Starting server.');
 		runSeq( 'browserSync' )
 	} else {
+		gutil.log('Generating dist folder and starting server.');
 		runSeq('default', 'browserSync', cb)
 	}
 });
