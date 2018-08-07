@@ -8,12 +8,14 @@
 	}
 
 	.main-wrap {
-
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: $main-max-width + 0; 
+    $mainWrap: $main-max-width - 40;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $secondary-base;
-		
+
 		tr:first-child {
 
 			td {
@@ -25,7 +27,7 @@
 		}
 
 		a, p {
-				
+
 			font-family: $font;
 			font-size: 16px;
 			color: $primary-color-text;
@@ -57,7 +59,7 @@
 			}
 
 			tr:not(:last-child) {
-				
+
 				p {
 
 					margin: 0px;
@@ -65,7 +67,7 @@
 			}
 
 			a, p {
-				
+
 				font-family: $font;
 				font-size: 16px;
 				color: $primary-color-text;
@@ -79,7 +81,7 @@
 				border-bottom: 1px solid;
 			}
 
-			.bullet{
+			.bullet {
 
 				font-size: 16px;
 				color: $primary-color-text;

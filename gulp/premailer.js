@@ -1,11 +1,12 @@
 // premailer.js
-var gulp 		= require('gulp'),
-	premailer 	= require('gulp-premailer'),
-	cfg		 	= require('./_config')();
+var gulp = require('gulp'),
+	premailer = require('gulp-premailer'),
+	cfg = require('./_config')();
 
 // ---------------------------------------------------------------------------
 gulp.task('inline', function () {
-	return gulp.src( cfg.dist.htmlFiles )
+	var htmlFiles = ['./dist/email.html', './dist/index.html'];
+	return gulp.src(htmlFiles)
 		.pipe(premailer())
-		.pipe(gulp.dest( cfg.dist.html ));
+		.pipe(gulp.dest(cfg.dist.html));
 });

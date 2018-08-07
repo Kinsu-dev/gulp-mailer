@@ -3,7 +3,12 @@
 	background-color: $secondary-base;
 
 	.main-wrap {
-		max-width: $main-width;
+    $mainWrap: $main-max-width + 60;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $secondary-base;
 
 		.btn-wrap {
@@ -20,16 +25,17 @@
 }
 
 .btn {
-	// border-radius: 5px;
-	// padding: 0px 25px;
+	//border-radius: 5px;
+	//padding: 1em 1.7em;
 
 	text-align: center;
-	height: 44px;
+	//height: 44px;
 	display: block;
 	background-color: $theme-base;
 	/*border-bottom: 4px solid $darken-theme-base;*/
-	/*-webkit-transition: all 0.2s linear;
-	transition: all 0.2s linear;*/
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	cursor: pointer;
 
 	&:hover {
 		background-color: $darken-theme-base !important;
@@ -42,13 +48,19 @@
 	> a {
 		color: #ffffff;
 		font-family: $font;
-		font-style: normal;
 		font-size: 16px;
+		line-height: 22px;
+		padding: 10px 20px;
+		//@include rem(font-size, 16px);
+		//@include rem(line-height, 22px);
+		/*@include rem((
+			padding: 10px 20px
+		));*/
+		font-style: normal;
 		font-weight: normal;
-		line-height: 44px; // vAlign text center
 		text-align: center;
 		text-decoration: none;
-		width: 100%;
+		//width: 100%;
 		display: block;
 		border-bottom: 0;
 		// border-radius: 10px;

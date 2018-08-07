@@ -4,48 +4,63 @@
 .first {
 	margin-top: 0;
 }
+
 .last {
 	margin-bottom: 20px;
 }
-.alignleft{
+
+.alignleft {
 	text-align: left;
 }
-.aligncenter{
+
+.aligncenter {
 	text-align: center;
 }
-.alignright{
+
+.alignright {
 	text-align: right;
 }
-.valigntop{
+
+.valigntop {
 	vertical-align: top;
 }
-.valignmid{
+
+.valignmid {
 	vertical-align: middle;
 }
-.valignbot{
+
+.valignbot {
 	vertical-align: bottom;
 }
-.clear{
-	clear:both;
+
+.clear {
+	clear: both;
 }
-.fleft{
+
+.fleft {
 	float: left;
 }
-.fright{
+
+.fright {
 	float: right;
 }
+
 .dirleft {
 	direction: ltr;
 }
+
 .dirright {
 	direction: rtl;
 }
+
 .full {
 	width: 88%;
 }
+
 .uppercase {
 	text-transform: uppercase;
 }
+
 .underline {
 	text-decoration: underline;
 }

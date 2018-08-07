@@ -1,10 +1,9 @@
 /* -------------------------------------
 	Main Table : Width // Max-Width
 ------------------------------------- */
-
-$main-width:				600px;
-$main-max-width:			540px;
-$main-min-width:			260px;
+$main-width: 600px;
+$main-max-width: $main-width - 60px;
+$main-min-width: 260px;
 
 /* -------------------------------------
 		RESPONSIVE AND MOBILE FRIENDLY STYLES
@@ -21,7 +20,7 @@ $main-min-width:			260px;
 
 	.flex-item,
 	.ExternalClass .ecxflex-item {
-		width: 148px!important;
+		width: 148px !important;
 	}
 
 	a[href^="tel:"], a[href^="sms:"] {
@@ -32,71 +31,68 @@ $main-min-width:			260px;
 	}
 	.mobile_link a[href^="tel:"], .mobile_link a[href^="sms:"] {
 		text-decoration: none !important;
-		color: $theme-color-text; 
+		color: $theme-color-text;
 		pointer-events: auto;
 		cursor: default;
 	}
 }
-@media only screen and (max-width: 617px ) { // this value has to be absolute and not a variable
+
+@media only screen and (max-width: 617px) { // this value has to be absolute and not a variable
 
 	.main {
 		width: 100%;
 	}
-	
+
 	img {
 		width: 100%;
 	}
-	.egoi-footer table[width^="650"],
-	.egoi-footer td[width^="650"],
-	.egoi-footer td[width^="570"],
-	.egoi-footer td[width^="50%"],
-	.egoi-footer table,
-	.egoi-footer td {
-		width: auto;
+}
+
+@media only screen and (max-width: 574px) {
+	.double-container tr:last-child td:nth-child(2) {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+	.double-content td > div:nth-child(2) {
+		width: 100% !important;
+		max-width: 100% !important;
 	}
 }
-@media only screen and (max-width: 574px) {
-  .double-container tr:last-child td:nth-child(2) {
-    width: 100% !important;
-    min-width: 100%!important;
-  }
-  .double-content td > div:nth-child(2) {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-}
-@media only screen and (max-width: 500px ) { // this value has to be absolute and not a variable
+
+@media only screen and (max-width: 500px) { // this value has to be absolute and not a variable
 	.ExternalClass .ecxarticle .ecxmain-wrap .ecxheading,
 	.ExternalClass .article .ecxmain-wrap .ecxheading,
 	.ExternalClass .ecxmain-wrap .ecxheading,
 	.article .main-wrap .heading {
-		font-size:90px!important;
+		font-size: 90px !important;
 	}
 }
+
 @media only screen and (max-width: 399px) { // this value has to be absolute and not a variable
-	
+
 	.inner-table-full {
 		float: left;
 		width: 100%;
 	}
 	.flex-item {
-		width: 100%!important;
+		width: 100% !important;
 	}
 	.ExternalClass .ecxflex-item {
-		width: 100%!important;
+		width: 100% !important;
 	}
 	.ExternalClass .ecxarticle .ecxmain-wrap .ecxheading,
 	.ExternalClass .article .ecxmain-wrap .ecxheading,
 	.ExternalClass .ecxmain-wrap .ecxheading,
 	.article .main-wrap .heading {
-		font-size:70px!important;
+		font-size: 70px !important;
 	}
 }
+
 @media only screen and (max-width: 310px) { // this value has to be absolute and not a variable
 	.ExternalClass .ecxarticle .ecxmain-wrap .ecxheading,
 	.ExternalClass .article .ecxmain-wrap .ecxheading,
 	.ExternalClass .ecxmain-wrap .ecxheading,
 	.article .main-wrap .heading {
-		font-size:65px!important;
+		font-size: 65px !important;
 	}
 }

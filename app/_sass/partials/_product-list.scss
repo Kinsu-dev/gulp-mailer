@@ -4,16 +4,18 @@
 	background-color: $secondary-base;
 
 	img[src^="/images/spacer.gif"] {
-		
+
 		max-height: 5px;
 		max-width: 0.1px;
 	}
 
 	.main-wrap {
-		
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: $main-max-width;
+    $mainWrap: $main-max-width - 0;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $secondary-base;
 
 		// if using text instead of img
@@ -27,9 +29,9 @@
 				}
 			}
 		}
-		
+
 		tr:last-child {
-			td { 
+			td {
 				> img {
 					width: 100%;
 					max-width: 540px;
@@ -48,13 +50,13 @@
 			font-size: 15px;
 			color: $theme-color-text;
 		}
-		
+
 		a {
 			text-decoration: none;
 			color: $theme-color-text;
 		}
 	}
-	
+
 	.item-wrap {
 
 		/* change the width percentage on table */
@@ -63,24 +65,24 @@
 		background-color: $secondary-base;
 
 		.inner-wrap {
-	
+
 			min-width: 194px;
 			max-width: $main-max-width;
-				
+
 			.icon-logo {
-	
+
 				min-width: 120px;
 			}
-	
-			.progarrow{
-	
+
+			.progarrow {
+
 				width: 100%;
 				max-width: 187px;
 				min-width: 120px;
 			}
-	
+
 			.text-container {
-	
+
 				max-width: 337px;
 				table.text-content {
 					max-width: 330px;
@@ -90,7 +92,7 @@
 						}
 					}
 				}
-	
+
 				.btn-mais__right {
 					float: right;
 					max-width: 116px;
@@ -102,7 +104,7 @@
 					min-width: 60px;
 				}
 			}
-	
+
 			a, p, strong, span {
 				font-family: $font;
 				font-size: 12px;
@@ -112,7 +114,7 @@
 			a {
 				text-decoration: none;
 			}
-			
+
 			span {
 				color: $theme-color-text;
 			}
@@ -122,24 +124,24 @@
 				color: $theme-color-text;
 				text-transform: uppercase;
 			}
-	
+
 			td {
-	
+
 				vertical-align: top;
 			}
-	
+
 			td:first-of-type {
-	
-				vertical-align: top;      
+
+				vertical-align: top;
 			}
 		}
 	}
 
-/*  
-		==================
-			module classes
-		================== 
-*/
+	/*
+			==================
+				module classes
+			==================
+	*/
 
 	.item-spacer__bgcolor {
 		background-color: $secondary-base;
@@ -152,7 +154,7 @@
 	.grey-bg {
 		background-color: #f0f0f0;
 	}
-	
+
 	.btn-spacer {
 		min-width: 40px;
 	}

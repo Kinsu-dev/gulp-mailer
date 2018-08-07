@@ -1,24 +1,37 @@
 {{!-- need to fix and test this button --}}
-<table class="buttons" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
+<table class="buttons {{classT}}" width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
 	<tr>
 		<td>
-			{{!-- change the width percentage on table
-			90% = 540px  --  95% = 540px + 30px  --}}
-			<table class="main-wrap" width="90%" cellspacing="0" cellpadding="0" border="0" align="center">
+			<!--[if (gte mso 9)|(IE)]>
+				<table  width="{{#if tableWidth}}{{tableWidth}}{{else}}600{{/if}}" align="center" cellpadding="0" cellspacing="0" border="0">
+				<tr>
+				<td>
+			<![endif]-->
+			<table class="main {{classW}}" cellpadding="0" cellspacing="0" border="0" align="center">
 				<tr>
 					<td>
-						{{!-- Manage if buttons goes left / center / right
-						btn-wrap, if bigger than 320px, it have a percentage value --}}
-						<table class="btn-wrap" width="{{btn-wrap}}" border="0" cellspacing="0" cellpadding="0" align="{{direction}}">
+						<table class="main-wrap" cellspacing="0" cellpadding="0" border="0" align="center">
 							<tr>
-								<td class="btn btn-primary">
-									<a href="{{href}}" tittle="{{title}}" target="_blank">{{title}}</a>
+								<td>
+									{{!-- Manage if buttons goes left / center / right btn-wrap, if bigger than 320px, it have a percentage value --}}
+									<table class="btn-wrap" width="{{btn-wrap}}" border="0" cellspacing="0" cellpadding="0" align="{{#if direction}}{{direction}}{{else}}center{{/if}}">
+										<tr>
+											<td class="btn {{#if btnType}}{{btnType}}{{else}}btn-primary{{/if}}">
+												<a href="{{{href}}}" title="{{title}}" target="_blank">{{title}}</a>
+											</td>
+										</tr>
+									</table>
 								</td>
 							</tr>
 						</table>
 					</td>
 				</tr>
 			</table>
+			<!--[if (gte mso 9)|(IE)]>
+				</td>
+				</tr>
+				</table>
+			<![endif]-->
 		</td>
 	</tr>
 </table>

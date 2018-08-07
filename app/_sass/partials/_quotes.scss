@@ -4,10 +4,12 @@
 	background-color: $secondary-base;
 
 	.main-wrap {
-		
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: $main-max-width + 30;
+    $mainWrap: $main-max-width + 30;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $lighten-theme-base;
 
 		a, p {

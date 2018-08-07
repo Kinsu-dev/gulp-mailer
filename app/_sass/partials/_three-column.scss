@@ -1,16 +1,18 @@
 .three-col__contatent {
-	
+
 	max-width: $main-width;
 	background-color: $primary-base;
 
 	.main-wrap {
-		
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: $main-max-width + 30;
+    $mainWrap: $main-max-width + 30;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $primary-base;
 		text-align: center;
-		
+
 		/* first row is a top spacer */
 		tr:not(:nth-child(2)) {
 			td {
@@ -37,7 +39,7 @@
 			max-height: 20px;
 			max-width: 0.1px;
 		}
-		
+
 		tr:nth-child(3) {
 
 			img[src^="/images/spacer.gif"] {
@@ -48,7 +50,7 @@
 			}
 		}
 	}
-	
+
 	.three-col__container {
 
 		max-width: $main-width;
@@ -56,18 +58,18 @@
 		text-align: left;
 
 		p {
-			
+
 			font-size: 10px;
 			color: $primary-color-text;
 			font-family: $font;
 		}
-		
+
 		a,
 		a[href^='mailto:'],
 		a:hover,
 		a:active,
 		a:visited {
-			
+
 			font-family: inherit;
 			color: $primary-color-text;
 			text-decoration: underline;
@@ -85,7 +87,7 @@
 
 		div {
 
-			background-color: $primary-base; 
+			background-color: $primary-base;
 			display: inline-block;
 			vertical-align: middle;
 			border: 0;
@@ -97,31 +99,31 @@
 				max-width: 180px;
 				display: inline-block;
 
-				td:nth-child(2){
+				td:nth-child(2) {
 					width: 160px;
 				}
 			}
 		}
 
 		div:nth-child(2) {
-			
+
 			table {
 				max-width: 288px;
 				display: inline-block;
 
-				td:nth-child(2){
+				td:nth-child(2) {
 					width: 268px;
 				}
 			}
 		}
 
 		div:last-child {
-			
+
 			table {
 				max-width: 132px;
 				display: inline-block;
 
-				td:nth-child(2){
+				td:nth-child(2) {
 					width: 112px;
 				}
 			}

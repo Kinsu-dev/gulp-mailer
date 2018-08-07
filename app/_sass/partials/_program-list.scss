@@ -9,10 +9,12 @@
 	}
 
 	.main-wrap {
-
-		/* change the width percentage on table */
-		/* 90% = 540px  --  95% = 570px + 30px */
-		max-width: $main-max-width;
+    $mainWrap: $main-max-width - 0;
+    $width: (($mainWrap * 100) / $main-width)+0%;
+    //change the width percentage on table
+    // unit((540 * 100) / 600)+0% = 90%
+    width: $width;
+    max-width: $mainWrap;
 		background-color: $primary-base; // $fith-bgcolor;
 
 		a, p {
@@ -62,14 +64,14 @@
 	.btn-fixed {
 
 		min-width: 48px;
-		max-width:58px;
+		max-width: 58px;
 	}
 
 	.lightgreybg {
 
 		background-color: #E6E6E6;
 	}
-	
+
 	.darkgreybg {
 
 		background-color: #D2D2D2;
