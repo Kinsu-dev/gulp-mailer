@@ -52,7 +52,7 @@ Clone repo for the new project/branch
 How to do a Git clone without the .git directory
 ```
 // Clone the repo
-git clone --depth=1 https://github.com/marocas/bymailer <Project-branch>
+git clone --depth=1 https://github.com/Kinsu-dev/gulp-mailer.git <Project-branch>
 // CD to cloned folder
 cd ~/Project-branch
 // Remove the .git directory
