@@ -7,14 +7,13 @@ const gulp = require('gulp'),
   ice = require('imagemin-jpeg-recompress'),
   pngquant = require('imagemin-pngquant'),
   cache = require('gulp-cache'),
-  clean = require('gulp-clean'),
   runSeq = require('run-sequence').use(gulp);
 
 // ---------------------------------------------------------------------------
 gulp.task('images', function () {
   runSeq(
     'imagemin',
-    'imagemin:clean'
+    'imagemin:clearCache'
   )
 });
 // ---------------------------------------------------------------------------
@@ -38,7 +37,6 @@ gulp.task('imagemin', function () {
     .pipe(gulp.dest('dist/images'));
 });
 // ---------------------------------------------------------------------------
-gulp.task('imagemin:clean', () => {
-  return gulp.src(cfg.dist.images, {read: false})
-    .pipe(clean());
+gulp.task('imagemin:clearCache', (done) => {
+  return cache.clearAll(done);
 });

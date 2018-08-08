@@ -2,10 +2,11 @@
 		Typography
 ------------------------------------- */
 
-$font: $open;
 $open: 'Open Sans', Arial, Helvetica, sans-serif;
 $arial: Arial, Helvetica, sans-serif;
 $georgia: Georgia, Helvetica, sans-serif;
+
+$font: $open;
 
 html {
 	@include rem-baseline;
