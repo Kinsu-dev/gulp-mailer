@@ -1,5 +1,9 @@
 .webview {
 
+  &.bs-color {
+    background-color: $primary-base;
+  }
+
 	// normal "view in web" message
 	.main-wrap {
     $mainWrap: $main-max-width - 0;
@@ -8,13 +12,30 @@
     // unit((540 * 100) / 600)+0% = 90%
     width: $width;
     max-width: $mainWrap;
-		background-color: $primary-base;
+		background-color: $secondary-base;
+
+    &.bs-color {
+      background-color: $primary-base;
+    }
+
+    tr {
+      &:first-of-type,
+      &:last-of-type {
+        td {
+          font-size: 10px;
+          line-height: 1;
+          height: 10px;
+        }
+      }
+    }
 
 		a, p {
-			font-family: $font;
 			font-size: 11px;
-			margin-top: 1.35em;
 		}
+
+    p {
+      padding: 0;
+    }
 
 		a {
 			color: $theme-color-text;
