@@ -13,7 +13,7 @@ gulp.task('watch', () => {
 });
 gulp.task('watch:images', () => {
   gWatch(cfg.src.images, () => {
-    runSeq('imagemin:clean', 'imagemin');
+    runSeq('images');
   });
 });
 
