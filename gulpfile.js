@@ -7,7 +7,7 @@ requireDir('./gulp');
 // -------------------------------------------------------
 // Create a your email with inline css
 gulp.task('dist', (cb) => {
-  runSeq('clean', ['sass', 'html', 'images'], 'cdn', 'inline', 'pug', cb);
+  runSeq('clean', ['sass', 'html', 'images'], 'inline', 'cdn', 'pug', cb);
 });
 // -------------------------------------------------------
 // Send dist folder to ftp server
