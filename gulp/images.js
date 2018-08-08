@@ -1,20 +1,13 @@
-var gulp = require('gulp'),
-	cfg = require('./_config')(),
-	plumber = require('gulp-plumber'),
-	gutil = require('gulp-util'),
-	imagemin = require('gulp-imagemin'),
-	ice = require('imagemin-jpeg-recompress'),
-	pngquant = require('imagemin-pngquant'),
-	cache = require('gulp-cache'),
-	runSeq = require('run-sequence').use(gulp);
+/** IMAGES TASKS --------------------------------------- */
+const gulp = require('gulp'),
+  cfg = require('./_config')(),
+  plumber = require('gulp-plumber'),
+  gutil = require('gulp-util'),
+  imagemin = require('gulp-imagemin'),
+  ice = require('imagemin-jpeg-recompress'),
+  pngquant = require('imagemin-pngquant'),
+  cache = require('gulp-cache');
 
-// ---------------------------------------------------------------------------
-gulp.task('images', function () {
-	runSeq(
-		'imagemin',
-		'clear'
-	)
-});
 // ---------------------------------------------------------------------------
 gulp.task('imagemin', function () {
 	var source = [cfg.src.images];
@@ -36,6 +29,7 @@ gulp.task('imagemin', function () {
 		.pipe(gulp.dest('dist/images'));
 });
 // ---------------------------------------------------------------------------
-gulp.task('clear', function (done) {
-	return cache.clearAll(done);
+gulp.task('imagemin:clean', () => {
+  return gulp.src(cfg.dist.images, {read: false})
+    .pipe(clean());
 });

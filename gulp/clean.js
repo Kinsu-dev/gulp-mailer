@@ -1,11 +1,11 @@
 // clean.js
-var gulp = require('gulp'),
-	cfg = require('./_config'),
-	plumber = require('gulp-plumber'),
-	gutil = require('gulp-util'),
-	clean = require('gulp-clean');
+const gulp = require('gulp'),
+  cfg = require('./_config'),
+  plumber = require('gulp-plumber'),
+  gutil = require('gulp-util'),
+  clean = require('gulp-clean');
 
-gulp.task('clean', function () {
+gulp.task('clean', () => {
 	var globs = './dist';
 	return gulp.src(globs, {read: false})
 		.pipe(plumber(function (error) {
