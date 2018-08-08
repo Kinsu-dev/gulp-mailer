@@ -6,27 +6,36 @@ const gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   ice = require('imagemin-jpeg-recompress'),
   pngquant = require('imagemin-pngquant'),
-  cache = require('gulp-cache');
+  cache = require('gulp-cache'),
+  clean = require('gulp-clean'),
+  runSeq = require('run-sequence').use(gulp);
 
 // ---------------------------------------------------------------------------
+gulp.task('images', function () {
+  runSeq(
+    'imagemin',
+    'imagemin:clean'
+  )
+});
+// ---------------------------------------------------------------------------
 gulp.task('imagemin', function () {
-	var source = [cfg.src.images];
+  var source = [cfg.src.images];
 
-	return gulp.src('app/_images/**/*.*')
-		.pipe(plumber(function (error) {
-			gutil.log(error.message);
-			this.emit('end');
-		}))
-		.pipe(cache(imagemin({
-			interlaced: true,
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [
-				pngquant(),
-				ice()
-			]
-		})))
-		.pipe(gulp.dest('dist/images'));
+  return gulp.src('app/_images/**/*.*')
+    .pipe(plumber(function (error) {
+      gutil.log(error.message);
+      this.emit('end');
+    }))
+    .pipe(cache(imagemin({
+      interlaced: true,
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+      use: [
+        pngquant(),
+        ice()
+      ]
+    })))
+    .pipe(gulp.dest('dist/images'));
 });
 // ---------------------------------------------------------------------------
 gulp.task('imagemin:clean', () => {
