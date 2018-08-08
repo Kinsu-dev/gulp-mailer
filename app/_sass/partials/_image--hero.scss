@@ -1,14 +1,13 @@
 .full-width-img {
-	max-width: $main-width;
 	//background-color: $secondary-base;
 
 	.main-wrap {
-    $mainWrap: $main-max-width - 0;
-    $width: (($mainWrap * 100) / $main-width)+0%;
-    //change the width percentage on table
-    // unit((540 * 100) / 600)+0% = 90%
-    width: $width;
-    max-width: $mainWrap;
+		$mainWrap: $main-max-width + 60;
+		$width: (($mainWrap * 100) / $main-width)+0%;
+		//change the width percentage on table
+		// unit((540 * 100) / 600)+0% = 90%
+		width: $width;
+		max-width: $mainWrap;
 
 		.img-wrap {
 			margin: 0 auto; // IOS fix align center.

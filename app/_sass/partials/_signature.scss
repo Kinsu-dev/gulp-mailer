@@ -1,8 +1,5 @@
 .signature {
 
-	max-width: $main-width;
-	background-color: $secondary-base;
-
 	.main-wrap {
     $mainWrap: $main-max-width - 0;
     $width: (($mainWrap * 100) / $main-width)+0%;
