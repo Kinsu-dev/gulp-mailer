@@ -7,7 +7,7 @@ requireDir('./gulp');
 // -------------------------------------------------------
 // Create a your email with inline css
 gulp.task('dist', (cb) => {
-  runSeq('clean', ['sass', 'html', 'images'], 'cdn', 'inline', 'rplc', 'pug', cb);
+  runSeq('clean', ['sass', 'html', 'images'], 'cdn', 'inline', 'pug', cb);
 });
 // -------------------------------------------------------
 // Send dist folder to ftp server
@@ -45,17 +45,11 @@ gulp.task('server', (cb) => {
 });
 gulp.task('serve', (cb) => {
   const fs = require('fs'), dist = 'dist';
-  if (fs.existsSync('node_modules')) {
-    console.log('node_modules', fs.existsSync('node_modules'));
-    if (fs.existsSync(dist)) {
-      gutil.log('Starting server.');
-      runSeq('browserSync', 'watch')
-    } else {
-      gutil.log('Generating dist folder and starting server.');
-      runSeq('default', 'browserSync', 'watch', cb)
-    }
+  if (fs.existsSync(dist)) {
+    gutil.log('Starting server.');
+    runSeq('browserSync', 'watch')
   } else {
-    console.log('node_modules', fs.existsSync('node_modules'));
+    gutil.log('Generating dist folder and starting server.');
+    runSeq('default', 'browserSync', 'watch', cb)
   }
-
 });
