@@ -109,9 +109,12 @@ gulp.task('cdn', function (cb) {
 gulp.task('regexReplace', function () {
   const htmlFiles = ['dist/email.html', 'dist/index.html'];
   return gulp.src(htmlFiles)
-		.pipe(replace({regex: '/http', replace: 'http'}))
+		.pipe(replace({regex: 'href="/images', replace: 'href="'+cfg.ftpConfig.absCDN+'/images'}))
+		.pipe(replace({regex: '/index.html', replace: cfg.ftpConfig.absCDN+'/index.html'}))
 		.pipe(replace({regex: '&gt;', replace: '>'}))
-		.pipe(replace({regex: 'margin', replace: 'Margin'}))
+		.pipe(replace({regex: '/http', replace: 'http'}))
+		.pipe(replace({regex: 'src="images', replace: 'src="'+cfg.ftpConfig.absCDN+'/images'}))
+		.pipe(replace({regex: 'src="/images', replace: 'src="'+cfg.ftpConfig.absCDN+'/images'}))
 		.pipe(gulp.dest('dist'));
 });
 // -------------------------------------------------------
