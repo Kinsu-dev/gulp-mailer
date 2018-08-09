@@ -1,9 +1,9 @@
-$rem-baseline: 10px !default;
-$rem-fallback: true !default;
-$rem-px-only: false !default;
+$em-baseline: 16px !default;
+$em-fallback: true !default;
+$em-px-only: false !default;
 
 // list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
-@function rem-separator($list) {
+@function em-separator($list) {
 	@if function-exists("list-separator") == true {
 		@return list-separator($list);
 	}
@@ -16,21 +16,21 @@ $rem-px-only: false !default;
 	@return if($test-list == $list, space, comma);
 }
 
-@mixin rem-baseline($zoom: 100%) {
-	font-size: $zoom / 16px * $rem-baseline;
+@mixin em-baseline($zoom: 100%) {
+	font-size: $zoom / 16px * $em-baseline;
 }
 
-@function rem-convert($to, $values...) {
+@function em-convert($to, $values...) {
 	$result: ();
-	$separator: rem-separator($values);
+	$separator: em-separator($values);
 
 	@each $value in $values {
-		@if type-of($value) == "number" and unit($value) == "rem" and $to == "px" {
-			$result: append($result, $value / 1rem * $rem-baseline, $separator);
-		} @else if type-of($value) == "number" and unit($value) == "px" and $to == "rem" {
-			$result: append($result, $value / ($rem-baseline / 1rem), $separator);
+		@if type-of($value) == "number" and unit($value) == "em" and $to == "px" {
+			$result: append($result, $value / 1em * $em-baseline, $separator);
+		} @else if type-of($value) == "number" and unit($value) == "px" and $to == "em" {
+			$result: append($result, $value / ($em-baseline / 1em), $separator);
 		} @else if type-of($value) == "list" {
-			$result: append($result, rem-convert($to, $value...), $separator);
+			$result: append($result, em-convert($to, $value...), $separator);
 		} @else {
 			$result: append($result, $value, $separator);
 		}
@@ -39,26 +39,26 @@ $rem-px-only: false !default;
 	@return if(length($result) == 1, nth($result, 1), $result);
 }
 
-@function rem($values...) {
-	@if $rem-px-only {
-		@return rem-convert(px, $values...);
+@function em($values...) {
+	@if $em-px-only {
+		@return em-convert(px, $values...);
 	} @else {
-		@return rem-convert(rem, $values...);
+		@return em-convert(em, $values...);
 	}
 }
 
-@mixin rem($properties, $values...) {
+@mixin em($properties, $values...) {
 	@if type-of($properties) == "map" {
 		@each $property in map-keys($properties) {
-			@include rem($property, map-get($properties, $property));
+			@include em($property, map-get($properties, $property));
 		}
 	} @else {
 		@each $property in $properties {
-			@if $rem-fallback or $rem-px-only {
-				#{$property}: rem-convert(px, $values...);
+			@if $em-fallback or $em-px-only {
+				#{$property}: em-convert(px, $values...);
 			}
-			@if not $rem-px-only {
-				#{$property}: rem-convert(rem, $values...);
+			@if not $em-px-only {
+				#{$property}: em-convert(em, $values...);
 			}
 		}
 	}

@@ -4,19 +4,18 @@
 /* OBLIGATORY EMAIL STYLES SO I DON'T GO CRAZY */
 
 p {
-  margin: 0;
-  padding: 0 0 0.85em;
+  @include em(margin, 0);
+  @include em(padding-bottom, 10px);
+  @include em(line-height, 1);
   vertical-align: middle;
-	line-height: 1.35em;
 }
 
 img {
-	font-size: 20px;
-	font-family: $font;
+  @include em(font-size, 20px);
 	display: block;
 	-ms-interpolation-mode: bicubic;
 	border: 0;
-	line-height: 100%;
+	line-height: 1;
 	outline: none;
 	text-decoration: none;
 	mso-line-height-rule: exactly;
@@ -36,8 +35,8 @@ table {
 body {
 	height: 100% !important;
 	width: 100% !important;
-	margin: 0;
-	padding: 0;
+  @include em(margin, 0);
+  @include em(padding, 0);
 }
 
 /* Let's make sure all tables have defaults */
@@ -77,8 +76,7 @@ td, a, span {
 .ExternalClass, .ExternalClass p,
 .ExternalClass span, .ExternalClass font,
 .ExternalClass td, .ExternalClass div {
-	line-height: 100%;
-	margin-bottom: 0;
+	line-height: 1;
 	margin: 0;
 }
 

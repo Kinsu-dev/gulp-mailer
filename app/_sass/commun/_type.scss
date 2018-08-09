@@ -8,8 +8,9 @@ $georgia: Georgia, Helvetica, sans-serif;
 
 $font: $open;
 
-html {
-	@include rem-baseline;
+.body-wrap,
+.content {
+	@include em-baseline;
 }
 
 h1, h2, h3 {
@@ -19,35 +20,38 @@ h1, h2, h3 {
 }
 
 h1 {
-	@include rem(font-size, 32px);
-	@include rem(line-height, 40px);
-	@include rem(margin-bottom, 32px);
+	@include em(font-size, 32px);
+	@include em(line-height, 40px);
+  @include em(padding-bottom, 32px);
 	font-weight: 500;
 }
 
 h2 {
-	@include rem(font-size, 24px);
-	@include rem(line-height, 30px);
-	@include rem(margin-bottom, 24px);
+	@include em(font-size, 24px);
+	@include em(line-height, 30px);
+	@include em(padding-bottom, 24px);
 }
 
 h3 {
-	@include rem(font-size, 18px);
-	@include rem(line-height, 24px);
-	@include rem(margin-bottom, 18px);
+	@include em(font-size, 18px);
+	@include em(line-height, 24px);
+	@include em(padding-bottom, 18px);
 }
 
 h4 {
-	@include rem(font-size, 16px);
-	@include rem(line-height, 22px);
-	@include rem(margin-bottom, 16px);
+	@include em(font-size, 16px);
+	@include em(line-height, 22px);
+	@include em(padding-bottom, 16px);
 }
 
 p {
 	font-family: $font;
-	@include rem(font-size, 16px);
-	@include rem(line-height, 22px);
-	@include rem(margin-bottom, 16px);
+	@include em(font-size, 16px);
+	@include em(line-height, 22px);
 	color: $primary-color-text;
 	font-weight: normal;
+}
+
+img {
+	font-family: $font;
 }

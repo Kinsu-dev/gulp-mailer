@@ -1,114 +1,113 @@
 .buttons {
 
-	.main-wrap {
+  .main-wrap {
     $mainWrap: $main-max-width + 60;
     $width: (($mainWrap * 100) / $main-width)+0%;
     //change the width percentage on table
     // unit((540 * 100) / 600)+0% = 90%
     width: $width;
     max-width: $mainWrap;
-		background-color: $secondary-base;
+    background-color: $secondary-base;
 
-		.btn-wrap {
-			margin: 0 auto; // IOS fix align center
-		}
-	}
+    .btn-wrap {
+      margin: 0 auto; // IOS fix align center
+    }
+  }
 
-	&.posRel {
-		width: 230px;
-		background-color: #fff;
-		position: relative;
-		top: -50px;
-	}
+  &.posRel {
+    width: 230px;
+    background-color: #fff;
+    position: relative;
+    top: -50px;
+  }
 }
 
 .btn {
-	//border-radius: 5px;
-	//padding: 1em 1.7em;
+  //border-radius: 5px;
+  //padding: 1em 1.7em;
 
-	text-align: center;
-	//height: 44px;
-	display: block;
-	background-color: $theme-base;
-	/*border-bottom: 4px solid $darken-theme-base;*/
-	-webkit-transition: all 0.2s linear;
-	transition: all 0.2s linear;
-	cursor: pointer;
+  text-align: center;
+  //height: 44px;
+  display: block;
+  background-color: $theme-base;
+  //border-bottom: 4px solid $darken-theme-base;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
 
-	&:hover {
-		background-color: $darken-theme-base !important;
-		/*border-bottom-color: $theme-color-text !important;*/
-	}
+  &:hover {
+    background-color: $darken-theme-base !important;
+    //border-bottom-color: $theme-color-text !important;
+  }
 }
 
 .btn-primary {
 
-	> a {
-		color: #ffffff;
-		font-family: $font;
-		font-size: 16px;
-		line-height: 22px;
-		padding: 10px 20px;
-		//@include rem(font-size, 16px);
-		//@include rem(line-height, 22px);
-		/*@include rem((
-			padding: 10px 20px
-		));*/
-		font-style: normal;
-		font-weight: normal;
-		text-align: center;
-		text-decoration: none;
-		//width: 100%;
-		display: block;
-		border-bottom: 0;
-		// border-radius: 10px;
-		-webkit-text-size-adjust: none;
+  > a {
+    color: #ffffff;
+    font-family: $font;
+    //font-size: 16px;
+    //line-height: 22px;
+    //padding: 10px 20px;
+    @include em(font-size, 16px);
+    @include em(line-height, 22px);
+    @include em((
+    	padding: 10px 20px
+    ));
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+    //width: 100%;
+    display: block;
+    border-bottom: 0;
+    // border-radius: 10px;
+    -webkit-text-size-adjust: none;
 
-		&:first-letter {
-			text-transform: uppercase;
-		}
-	}
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
 }
 
 .double-column .double-content .double-container {
-	.btn {
-		// border-radius: 5px;
-		// padding: 0px 25px;
+  .btn {
+    // border-radius: 5px;
+    // padding: 0px 25px;
 
-		text-align: center;
-		height: 44px;
-		display: block;
-		background-color: $theme-base;
-		/*border-bottom: 4px solid $darken-theme-base;*/
-		/*-webkit-transition: all 0.2s linear;
-		transition: all 0.2s linear;*/
+    text-align: center;
+    height: 44px;
+    display: block;
+    background-color: $theme-base;
+    //border-bottom: 4px solid $darken-theme-base;
+    //transition: all 0.2s linear;
 
-		&:hover {
-			background-color: $darken-theme-base !important;
-			/*border-bottom-color: $theme-color-text !important;*/
-		}
-	}
-	.btn-primary {
+    &:hover {
+      background-color: $darken-theme-base !important;
+      //border-bottom-color: $theme-color-text !important;
+    }
+  }
+  .btn-primary {
 
-		> a {
-			color: #ffffff;
-			font-family: $font;
-			font-style: normal;
-			font-size: 16px;
-			font-weight: normal;
-			line-height: 44px; // vAlign text center
-			text-align: center;
-			text-decoration: none;
-			width: 100%;
-			display: block;
-			border-bottom: 0;
-			// border-radius: 10px;
-			-webkit-text-size-adjust: none;
+    > a {
+      color: #ffffff;
+      font-family: $font;
+      font-style: normal;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 44px; // vAlign text center
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      display: block;
+      border-bottom: 0;
+      // border-radius: 10px;
+      -webkit-text-size-adjust: none;
 
-			&:first-letter {
-				text-transform: uppercase;
-			}
-		}
-	}
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
 
 }
